@@ -1,0 +1,16 @@
+org\uv\dsweb\practica04\ProductoDAO.class
+org\uv\dsweb\practica04\TransaccionDB.class
+ClienteBean.class
+org\uv\dsweb\practica04\PojoVenta.class
+org\uv\dsweb\practica04\ProductoBean.class
+org\uv\dsweb\practica04\SelectionDB.class
+org\uv\dsweb\practica04\PojoCliente.class
+org\uv\dsweb\practica04\VentaDAO.class
+org\uv\dsweb\practica04\ClienteDAO.class
+org\uv\dsweb\practica04\PojoProducto.class
+org\uv\dsweb\practica04\HibernateUtil.class
+VentaBean.class
+org\uv\dsweb\practica04\DetalleVentaBean.class
+org\uv\dsweb\practica04\IDAOGeneral.class
+org\uv\dsweb\practica04\PojoDetalleVenta.class
+org\uv\dsweb\practica04\DetalleVentaDAO.class

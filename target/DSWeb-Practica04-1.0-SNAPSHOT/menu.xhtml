@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Ventitas</title>
+        <style type="text/css">
+            h1.page-title {
+                color: #ffffff;
+                background-color: #007BFF;
+                text-align: center;
+                padding: 20px 0;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                font-size: 30px;
+                border-bottom: 4px solid #0056b3;
+            }
+
+            .tabview-navigation {
+                background-color: #0056b3;
+                border-bottom: 2px solid #003d7a;
+            }
+
+            .tabview-navigation .tab {
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .tabview-navigation .tab:hover {
+                background-color: #003d7a;
+            }
+
+            .tabview-panel {
+                background-color: #f4f6f9;
+                padding: 20px;
+                font-size: 16px;
+            }
+
+            .nav-menu a {
+                text-decoration: none;
+                color: #007BFF;
+                font-weight: bold;
+                font-size: 18px;
+                padding: 10px;
+                margin: 0 15px;
+                border: 2px solid #007BFF;
+                border-radius: 5px;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            .nav-menu a:hover {
+                background-color: #007BFF;
+                color: white;
+            }
+
+            .nav-menu {
+                text-align: center;
+                margin-top: 30px;
+            }
+        </style>
+    </h:head>
+
+    <h:body>
+        <h1 class="page-title">JazaShop</h1>
+
+        <h:form>
+            <p:tabView id="tabs" dynamic="true" cache="false">
+                <p:tab title="Productos">
+                    <ui:include src="productos.xhtml" />
+                </p:tab>
+                <p:tab title="Clientes">
+                    <ui:include src="clientes.xhtml" />
+                </p:tab>
+                <p:tab title="Ventas">
+                    <ui:include src="ventas.xhtml" />
+                </p:tab>
+            </p:tabView>
+        </h:form>
+    </h:body>
+</html>

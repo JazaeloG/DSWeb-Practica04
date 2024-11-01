@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:body>
+    <div class="container">
+        <h2>Crud Productos</h2>
+
+        <!-- Formulario para Crear o Editar Producto -->
+        <h:form>
+            <h:outputLabel for="nombre" value="Nombre"/>
+            <p:inputText id="nombre" value="#{productoBean.producto.nombre}" required="true"/>
+
+            <h:outputLabel for="descripcion" value="Descripcion"/>
+            <p:inputText id="descripcion" value="#{productoBean.producto.descripcion}" required="true"/>
+
+            <h:outputLabel for="precio" value="Precio"/>
+            <p:inputText id="precio" value="#{productoBean.producto.precio}" required="true"/>
+
+            <p:commandButton value="Guardar Producto" action="#{productoBean.crearProducto()}" icon="pi pi-save" styleClass="btn" />
+        </h:form>
+
+        <!-- Mostrar Lista de Productos -->
+        <h:panelGroup rendered="#{not empty productoBean.listaProductos}">
+            <p:dataTable value="#{productoBean.listaProductos}" var="producto">
+                <p:column headerText="ID">
+                    #{producto.idProducto}
+                </p:column>
+                <p:column headerText="Descripción">
+                    #{producto.descripcion}
+                </p:column>
+                <p:column headerText="Precio">
+                    #{producto.precio}
+                </p:column>
+                <p:column headerText="Acciones">
+                    <p:commandButton value="Editar" action="#{productoBean.seleccionarProducto(producto)}" icon="pi pi-pencil" />
+                    <p:commandButton value="Eliminar" action="#{productoBean.eliminarProducto(producto)}" icon="pi pi-trash" onclick="return confirm('¿Seguro que deseas eliminar este producto?');"/>
+                </p:column>
+            </p:dataTable>
+        </h:panelGroup>
+    </div>
+</h:body>
+</html>
